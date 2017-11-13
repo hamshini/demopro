@@ -1,0 +1,23 @@
+
+public class Solution {
+	void show() {
+
+		System.out.println(" function");
+	}
+
+	void getGreeting() {
+
+		System.out.println("Congtratz...");
+	}
+
+	public static void main(String[] args) {
+		long accountNumber = 12000000077777889l;
+		float houseRentAllowance = 5.0f;
+		double travelAllowance = 10.3d;
+		boolean status = true;
+		int white = 0x3fff;
+		short black = (short) ~white;
+		double providentFund = houseRentAllowance;
+		System.out.println("HEllOooooooooooooo\n");
+	}
+}

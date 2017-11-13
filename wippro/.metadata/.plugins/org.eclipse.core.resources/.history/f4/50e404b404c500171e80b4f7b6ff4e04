@@ -1,0 +1,42 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Solution {
+	void show() {
+
+		System.out.println(" function");
+	}
+
+	void getGreeting(String user) {
+
+		System.out.println("Congtratz..." + user);
+	}
+
+	double calculateNetSalary(double basicSalary, float travelAllowance, float dearnessAllowance,
+			float houseRentAllowance, float providentFund) {
+		double netPay = basicSalary + (basicSalary * (travelAllowance / 100))
+				+ (basicSalary * (dearnessAllowance / 100)) + (basicSalary * (houseRentAllowance / 100))
+				- (basicSalary * (providentFund / 100));
+		return netPay;
+	}
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		String str = bf.readLine();
+		float age = Float.valueOf(str);
+		System.out.println(str + 4);
+
+		System.out.println(age + 3);
+		long accountNumber = 12000000077777889l;
+		float houseRentAllowance = 5.0f;
+		double travelAllowance = 10.3d;
+		boolean status = true;
+		int white = 0x3fff;
+		short black = (short) ~white;
+		double providentFund = houseRentAllowance;
+		System.out.println("HEllOooooooooooooo\n");
+		Solution s = new Solution();
+		s.calculateNetSalary(1000, 10, 12, 13, 11);
+	}
+}

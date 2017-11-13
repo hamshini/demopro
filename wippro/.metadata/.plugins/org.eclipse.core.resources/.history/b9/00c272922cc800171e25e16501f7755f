@@ -1,0 +1,63 @@
+package org.dummy;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import org.sample.emp.Employee;
+
+public class Solution {
+	/*void show() {
+
+		System.out.println(" function");
+	}
+
+	void getGreeting(String user) {
+
+		System.out.println("Congtratz..." + user);
+	}
+
+	double calculateNetSalary(double basicSalary, float travelAllowance, float dearnessAllowance,
+			float houseRentAllowance, float providentFund) {
+		double netPay = basicSalary + (basicSalary * (travelAllowance / 100))
+				+ (basicSalary * (dearnessAllowance / 100)) + (basicSalary * (houseRentAllowance / 100))
+				- (basicSalary * (providentFund / 100));
+		return netPay;
+	}
+*/
+	public static void main(String[] args) throws IOException {
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		/*String str = bf.readLine();
+		float age = Float.valueOf(bf.readLine());
+		System.out.println(str + 4);
+
+		System.out.println(age + 3);
+		long accountNumber = 12000000077777889l;
+		float houseRentAllowance = 5.0f;
+		double travelAllowance = 10.3d;
+		boolean status = true;
+		int white = 0x3fff;
+		short black = (short) ~white;
+		double providentFund = houseRentAllowance;
+		*/
+		System.out.println("HEllOooooooooooooo\n");
+		Employee emp = new Employee();
+		System.out.println(emp.getId());
+		System.out.println(emp.getName());
+		System.out.println(emp.getEmail());
+		System.out.println(emp.getPhone());
+		System.out.println(emp.isGender());
+		emp.setId(3);
+		emp.setName("hamsh");
+		emp.setEmail("hamsh@gmail.com");
+		emp.setPhone(9456455645L);
+		emp.setGender(true);
+		System.out.println();
+		System.out.println(emp.getId());
+		System.out.println(emp.getName());
+		System.out.println(emp.getEmail());
+		System.out.println(emp.getPhone());
+		System.out.println(emp.isGender());
+	
+	}
+}
