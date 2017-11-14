@@ -14,7 +14,6 @@ public class Solution {
 	public static void main(String[] args) throws IOException {
 		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 		Session session = sf.openSession();
-		session.beginTransaction();
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
 		System.out.println("Enter id: ");
@@ -32,8 +31,7 @@ public class Solution {
 		System.out.println("email: " + emp.getEmail());
 		System.out.print("phone: " + emp.getPhone());
 	//	System.out.print("gender: " + emp.isGender());
-session.save(emp);
-session.getTransaction().commit();
+
 		session.close();
 	}
 }

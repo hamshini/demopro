@@ -1379,3 +1379,9 @@ org.tukaani.xz.XZFormatException: Input is not in the XZ format
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-11-14 10:10:14.970
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-11-14 10:10:14.997
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
