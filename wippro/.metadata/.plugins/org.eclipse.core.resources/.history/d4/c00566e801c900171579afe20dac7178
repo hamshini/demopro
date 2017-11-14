@@ -2,13 +2,10 @@ package org.sample.emp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name="EMPLOYEE_DETAILS")
 public class Employee {
 	
 
@@ -26,14 +23,11 @@ public class Employee {
 	//	this.gender = gender;
 	}
 @Id
-@GeneratedValue
 @Column(name = "EMP_ID")
 	private int id;
-@Column(name = "EMP_NAME",length=150,nullable=false)
 	private String name;
-	@Column(name = "EMAIL_ID",nullable=false,unique=true)
+	@Column(name = "EMAIL_ID")
 	private String email;
-	@Column(name="phone",nullable=false,unique=true)
 	private long phone;
 	@Column(name = "BASIC_SALARY")
 	private double basicSalary;

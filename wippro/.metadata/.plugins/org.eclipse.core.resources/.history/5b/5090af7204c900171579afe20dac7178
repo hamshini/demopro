@@ -36,9 +36,8 @@ public class Solution {
 			// System.out.print("gender: " + emp.isGender());
 
 			session.save(emp);
-			
+			session.getTransaction().commit();
 		}
-		session.getTransaction().commit();
 		sf.close();
 		session.close();
 	}

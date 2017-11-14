@@ -2,7 +2,6 @@ package org.sample.emp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -26,7 +25,6 @@ public class Employee {
 	//	this.gender = gender;
 	}
 @Id
-@GeneratedValue
 @Column(name = "EMP_ID")
 	private int id;
 @Column(name = "EMP_NAME",length=150,nullable=false)
