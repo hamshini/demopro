@@ -1385,3 +1385,9 @@ org.tukaani.xz.XZFormatException: Input is not in the XZ format
 
 !ENTRY org.eclipse.jface.text 2 0 2017-11-14 10:10:14.997
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-11-14 14:47:37.140
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-11-14 14:47:37.294
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
