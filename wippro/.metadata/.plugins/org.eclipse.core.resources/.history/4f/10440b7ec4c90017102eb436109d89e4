@@ -1,0 +1,62 @@
+package org.dummy;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.sample.emp.Employee;
+
+public class Solution {
+
+	public static void main(String[] args) throws IOException {
+		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+		Session session = sf.openSession();
+		session.beginTransaction();
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		int i = 0;
+		Employee emp = new Employee();
+		/*
+		 * while (i < 3) { i++; System.out.println("Enter id: "); int id =
+		 * Integer.valueOf(bf.readLine()); System.out.print("Enter name: ");
+		 * String name = bf.readLine(); System.out.print("Enter Email: ");
+		 * String email = bf.readLine(); System.out.print("Enter phone: "); long
+		 * phone = Long.valueOf(bf.readLine());
+		 * System.out.println("Enter BasicSalary"); double
+		 * basicSalary=bf.read(); System.out.println("Enter travelAllowance");
+		 * float travelAllowance=bf.read();
+		 * System.out.println("Enter dearnessAllowance"); float
+		 * dearnessAllowance=bf.read();
+		 * System.out.println("Enter houseRentAllowance"); float
+		 * houseRentAllowance=bf.read();
+		 * System.out.println("Enter providentFund"); float
+		 * providentFund=bf.read(); // System.out.print("Enter gender: "); //
+		 * boolean gender = Boolean.valueOf(bf.readLine());
+		 * 
+		 * 
+		 * Employee emp = new Employee(id, name, email, phone);
+		 * System.out.println("id: " + emp.getId());
+		 * System.out.println("email: " + emp.getEmail());
+		 * System.out.print("phone: " + emp.getPhone()); //
+		 * System.out.print("gender: " + emp.isGender());
+		 * System.out.println("BasicSalary:"+emp.getBasicSalary());
+		 * System.out.println("travelAllowance:"+emp.getTravelAllowance());
+		 * System.out.println("dearnessAllowance:"+emp.getDearnessAllowance());
+		 * System.out.println("houseRentAllowance: "+emp.getHouseRentAllowance()
+		 * ); System.out.println("providentFund : "+emp.getProvidentFund());
+		 * session.save(emp);
+		 * 
+		 * System.out.println("Enter Bookid: "); int id =
+		 * Integer.valueOf(bf.readLine()); System.out.print("Enter name: ");
+		 * String name = bf.readLine();
+		 * 
+		 * }
+		 */
+		session.save(emp);
+		session.getTransaction().commit();
+		sf.close();
+		session.close();
+	}
+}

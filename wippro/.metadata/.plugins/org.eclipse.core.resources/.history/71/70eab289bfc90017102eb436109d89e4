@@ -1,0 +1,5 @@
+package org.isbn.bk;
+
+public class Book {
+
+}
