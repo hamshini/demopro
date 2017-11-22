@@ -35,8 +35,9 @@
         <property name="hbm2ddl.auto">create</property>
 
         <!-- Names the annotated entity class -->
-        <mapping resource="org/sample/emp/employee.hbm.xml"/>
-		<mapping resource="org/isbn/bk/book.hbm.xml"/>
+        <!-- <mapping resource="org/sample/emp/employee.hbm.xml"/> -->
+		<!-- <mapping resource="org/isbn/bk/book.hbm.xml"/> -->
+		<mapping resource="org/grosary/stock/item.hbm.xml"/>
     </session-factory>
 
 </hibernate-configuration>

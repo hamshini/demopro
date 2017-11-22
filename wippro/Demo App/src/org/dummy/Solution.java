@@ -6,9 +6,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Date;
 
+import org.grosary.stock.Item;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.loader.plan.build.spi.ExpandingEntityIdentifierDescription;
 import org.sample.emp.Employee;
 
 public class Solution {
@@ -18,7 +20,36 @@ public class Solution {
 		Session session = sf.openSession();
 		session.beginTransaction();
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		int i = 0;
+	//	Item item1=new Item();
+		while(true){
+			System.out.println("Enter choice");
+			int ch = Integer.valueOf(bf.readLine());
+			switch(ch){
+			case 1:
+				session.beginTransaction();
+				Item item=new Item();
+				System.out.println("Enter the item name");
+				item.setName(bf.readLine());
+				System.out.println("Enter the item quantity");
+				item.setQuantity(Integer.valueOf(bf.readLine()));
+				System.out.println("Enter the item price");
+				item.setPrice(Double.valueOf(bf.readLine()));
+				System.out.println("id: " + item.getId());
+				System.out.println("name: " + item.getName());
+				System.out.println("quantity: " + item.getQuantity());
+				System.out.println("price: " + item.getPrice());
+				session.save(item);
+				session.getTransaction().commit();
+				break;
+			case 2:
+				System.out.println("Number of totalProduct= "+Item.getTotalpro());
+				break;
+			default:
+				break;
+			}
+			
+		}
+		/*int i = 0;
 		
 		
 		while (i < 3) {
@@ -80,11 +111,11 @@ public class Solution {
 			
 		
 		
-		session.save(emp);
-		session.save(bk);
+		//session.save(emp);
+		//session.save(bk);
+		//}
+		//session.getTransaction().commit();
+		//sf.close();
+		//session.close();
 		}
-		session.getTransaction().commit();
-		sf.close();
-		session.close();
 	}
-}
