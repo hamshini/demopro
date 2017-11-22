@@ -20,14 +20,7 @@ public class Solution {
 		Session session = sf.openSession();
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		session.beginTransaction();
-		Item item=session.get(Item.class,1);
-		System.out.println("id: " + item.getId());
-		System.out.println("name: " + item.getName());
-		System.out.println("quantity: " + item.getQuantity());
-		System.out.println("price: " + item.getPrice());
-		item.setName("Paste");									//update in db nd also change in hybernate as update
-		item.setPrice(100);
-		session.update(item);
+		Item item=new Item();
 		item.setId(2);
 		session.delete(item);
 		session.getTransaction().commit();

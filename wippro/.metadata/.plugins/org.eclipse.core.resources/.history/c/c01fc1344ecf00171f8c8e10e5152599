@@ -25,11 +25,6 @@ public class Solution {
 		System.out.println("name: " + item.getName());
 		System.out.println("quantity: " + item.getQuantity());
 		System.out.println("price: " + item.getPrice());
-		item.setName("Paste");									//update in db nd also change in hybernate as update
-		item.setPrice(100);
-		session.update(item);
-		item.setId(2);
-		session.delete(item);
 		session.getTransaction().commit();
 	/*	
 	//	Item item1=new Item();

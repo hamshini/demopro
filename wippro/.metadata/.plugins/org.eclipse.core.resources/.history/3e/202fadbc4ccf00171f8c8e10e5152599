@@ -18,20 +18,8 @@ public class Solution {
 	public static void main(String[] args) throws IOException {
 		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 		Session session = sf.openSession();
+		//session.beginTransaction();
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		session.beginTransaction();
-		Item item=session.get(Item.class,1);
-		System.out.println("id: " + item.getId());
-		System.out.println("name: " + item.getName());
-		System.out.println("quantity: " + item.getQuantity());
-		System.out.println("price: " + item.getPrice());
-		item.setName("Paste");									//update in db nd also change in hybernate as update
-		item.setPrice(100);
-		session.update(item);
-		item.setId(2);
-		session.delete(item);
-		session.getTransaction().commit();
-	/*	
 	//	Item item1=new Item();
 		while(true){
 			System.out.println("Enter choice");
@@ -127,7 +115,7 @@ public class Solution {
 		//session.save(bk);
 		//}
 		//session.getTransaction().commit();
-		sf.close();
-		session.close();
+		//sf.close();
+		//session.close();
 		}
 	}
