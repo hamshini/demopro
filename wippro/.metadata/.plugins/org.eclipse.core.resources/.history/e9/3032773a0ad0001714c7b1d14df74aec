@@ -1,0 +1,15 @@
+package org.vehi;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Solution {
+	SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+	Session session = sf.openSession();
+Vehicle vehicle=new Vehicle();
+//vehicle.setName("car");
+Twowheeler two=new Twowheeler();
+two.setName("Bike");
+Fourwheeler four=new Fourwheeler();
+}

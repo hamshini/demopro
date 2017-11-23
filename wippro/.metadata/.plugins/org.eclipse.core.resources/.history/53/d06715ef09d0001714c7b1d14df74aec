@@ -1,0 +1,27 @@
+package org.vehi;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Vehicle {
+	@Id
+private int vehicleId;
+private String name;
+public int getVehicleId() {
+	return vehicleId;
+}
+public void setVehicleId(int vehicleId) {
+	this.vehicleId = vehicleId;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public Vehicle() {
+	super();
+}
+
+}

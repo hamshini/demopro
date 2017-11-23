@@ -20,25 +20,11 @@ public class Solution {
 		Session session = sf.openSession();
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		session.beginTransaction();
-		Item item=session.get(Item.class,1);
-		System.out.println("id: " + item.getId());
-		System.out.println("name: " + item.getName());
-		System.out.println("quantity: " + item.getQuantity());
-		System.out.println("price: " + item.getPrice());
-		item.setName("Paste");									//update in db nd also change in hybernate as update
-		item.setPrice(100);
-		session.update(item);
-		item.setId(2);
-		session.delete(item);
-		session.getTransaction().commit();
-	/*	
-	//	Item item1=new Item();
 		while(true){
 			System.out.println("Enter choice");
 			int ch = Integer.valueOf(bf.readLine());
 			switch(ch){
 			case 1:
-				session.beginTransaction();
 				Item item=new Item();
 				System.out.println("Enter the item name");
 				item.setName(bf.readLine());
@@ -54,6 +40,47 @@ public class Solution {
 				session.getTransaction().commit();
 				break;
 			case 2:
+				Item item1=session.get(Item.class,1);
+				System.out.println("Retriving values from DB");
+				System.out.println("id: " + item1.getId());
+				System.out.println("name: " + item1.getName());
+				System.out.println("quantity: " + item1.getQuantity());
+				System.out.println("price: " + item1.getPrice());
+				session.save(item1);
+				session.getTransaction().commit();
+				break;
+			case 3:
+				Item item11=session.get(Item.class,1);
+				System.out.println("update values in db");
+				System.out.println("id: " + item11.getId());
+				System.out.println("name: " + item11.getName());
+				System.out.println("quantity: " + item11.getQuantity());
+				System.out.println("price: " + item11.getPrice());
+				item11.setName("Paste");									
+				item11.setPrice(100);
+				session.update(item11);
+				session.save(item11);
+				session.getTransaction().commit();
+				break;
+			case 4:
+				Item item3=new Item();
+				item3.setId(2);
+				session.delete(item3);
+				session.save(item3);
+				session.getTransaction().commit();
+				break;
+			case 5:
+				Item item4=session.get(Item.class,0);
+				System.out.println("Record doesnot exist in db");
+				System.out.println("id: " + item4.getId());
+				System.out.println("name: " + item4.getName());
+				System.out.println("quantity: " + item4.getQuantity());
+				System.out.println("price: " + item4.getPrice());
+				session.save(item4);
+				session.getTransaction().commit();
+				break;
+				
+			case 6:
 				System.out.println("Number of totalProduct= "+Item.getTotalpro());
 				break;
 			default:
@@ -127,7 +154,7 @@ public class Solution {
 		//session.save(bk);
 		//}
 		//session.getTransaction().commit();
-		sf.close();
-		session.close();
+	//	sf.close();
+		//session.close();
 		}
 	}

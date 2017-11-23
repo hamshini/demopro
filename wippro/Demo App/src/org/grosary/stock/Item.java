@@ -24,7 +24,7 @@ public class Item {
 		Item.totalpro++;
 	}
 
-	private static int totalpro;
+	public static int totalpro;
 	@Id
 	@GeneratedValue
 	@Column(name="ITEM_ID")
