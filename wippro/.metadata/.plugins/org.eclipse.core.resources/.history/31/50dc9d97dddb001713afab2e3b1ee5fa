@@ -1,0 +1,59 @@
+package com.mcis.store.stock;
+
+import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name="item_tbl")
+public class Item {
+	@Id
+	@GeneratedValue
+	@Column(name="item_id",length=11)
+	private int id;
+	@Column(name="name",unique=true,nullable=false,length=20)
+	private String name;
+	@Column(name="price",nullable=false)
+	private double price;
+	@Column(name="qty",nullable=false,length=11)
+	private int quantity;
+	@Column(name="Exp_date",nullable=false)
+	//@Temporal(TemporalType.DATE)
+	private Date expiryDate;
+	public Item() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+	
+}

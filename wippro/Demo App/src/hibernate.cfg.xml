@@ -30,14 +30,16 @@
 
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">create</property>
-
+	 <mapping class="org.main.User" />	
+	  <mapping class="org.main.Address" />  
 		<!-- Names the annotated entity class -->
 		<!-- <mapping resource="org/sample/emp/employee.hbm.xml"/> -->
 		<!-- <mapping resource="org/isbn/bk/book.hbm.xml"/> -->
 		<!-- <mapping resource="org/grosary/stock/item.hbm.xml"/> -->
-		<mapping class="org.vehi.Vehicle" />
-		<mapping class="org.vehi.Twowheeler" />
-		<mapping class="org.vehi.Fourwheeler" />
+
+		<!-- <mapping class="org.vehi.Vehicle" /> -->
+		<!--  <mapping class="org.vehi.Twowheeler" /> -->
+	<!-- <mapping class="org.vehi.Fourwheeler" />  -->	 
 	</session-factory>
 
 </hibernate-configuration>

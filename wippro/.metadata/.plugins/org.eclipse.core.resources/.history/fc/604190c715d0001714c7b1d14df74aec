@@ -1,0 +1,24 @@
+package org.vehi;
+
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorColumn(name="VEHICLE_TYPE",discriminatorType="two")
+public class Twowheeler extends Vehicle {
+private String StreeringHandle;
+
+public String getStreeringHandle() {
+	return StreeringHandle;
+}
+
+public void setStreeringHandle(String streeringHandle) {
+	StreeringHandle = streeringHandle;
+}
+
+public Twowheeler() {
+	super();
+}
+
+}

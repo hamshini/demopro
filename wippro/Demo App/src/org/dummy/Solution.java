@@ -21,67 +21,60 @@ public class Solution {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		session.beginTransaction();
 		while(true){
-			System.out.println("Enter choice");
-			int ch = Integer.valueOf(bf.readLine());
-			switch(ch){
+			System.out.println("Enter your choice");
+			int choice = Integer.valueOf(bf.readLine());
+			switch(choice){
 			case 1:
-				Item item=new Item();
+				Item obj=new Item();
 				System.out.println("Enter the item name");
-				item.setName(bf.readLine());
+				obj.setName(bf.readLine());
 				System.out.println("Enter the item quantity");
-				item.setQuantity(Integer.valueOf(bf.readLine()));
+				obj.setQuantity(Integer.valueOf(bf.readLine()));
 				System.out.println("Enter the item price");
-				item.setPrice(Double.valueOf(bf.readLine()));
-				System.out.println("id: " + item.getId());
-				System.out.println("name: " + item.getName());
-				System.out.println("quantity: " + item.getQuantity());
-				System.out.println("price: " + item.getPrice());
-				session.save(item);
+				obj.setPrice(Double.valueOf(bf.readLine()));
+				System.out.println("id: " + obj.getId());
+				System.out.println("name: " + obj.getName());
+				System.out.println("quantity: " + obj.getQuantity());
+				System.out.println("price: " + obj.getPrice());
+				session.save(obj);
 				session.getTransaction().commit();
 				break;
 			case 2:
-				Item item1=session.get(Item.class,1);
-				System.out.println("Retriving values from DB");
-				System.out.println("id: " + item1.getId());
-				System.out.println("name: " + item1.getName());
-				System.out.println("quantity: " + item1.getQuantity());
-				System.out.println("price: " + item1.getPrice());
-				session.save(item1);
+				Item obj1=session.get(Item.class,1);
+				System.out.println("id: " + obj1.getId());
+				System.out.println("name: " + obj1.getName());
+				System.out.println("quantity: " + obj1.getQuantity());
+				System.out.println("price: " + obj1.getPrice());
+				session.save(obj1);
 				session.getTransaction().commit();
 				break;
 			case 3:
-				Item item11=session.get(Item.class,1);
-				System.out.println("update values in db");
-				System.out.println("id: " + item11.getId());
-				System.out.println("name: " + item11.getName());
-				System.out.println("quantity: " + item11.getQuantity());
-				System.out.println("price: " + item11.getPrice());
-				item11.setName("Paste");									
-				item11.setPrice(100);
-				session.update(item11);
-				session.save(item11);
+				Item obj2=session.get(Item.class,1);
+				obj2.setName("Paste");									
+				obj2.setPrice(200);
+				session.update(obj2);
+				session.save(obj2);
 				session.getTransaction().commit();
 				break;
 			case 4:
-				Item item3=new Item();
-				item3.setId(2);
-				session.delete(item3);
-				session.save(item3);
+				Item obj3=new Item();
+				obj3.setId(2);
+				session.delete(obj3);
+				session.save(obj3);
 				session.getTransaction().commit();
 				break;
 			case 5:
-				Item item4=session.get(Item.class,0);
-				System.out.println("Record doesnot exist in db");
-				System.out.println("id: " + item4.getId());
-				System.out.println("name: " + item4.getName());
-				System.out.println("quantity: " + item4.getQuantity());
-				System.out.println("price: " + item4.getPrice());
-				session.save(item4);
+				Item obj4=session.get(Item.class,0);
+				System.out.println("id: " + obj4.getId());
+				System.out.println("name: " + obj4.getName());
+				System.out.println("quantity: " + obj4.getQuantity());
+				System.out.println("price: " + obj4.getPrice());
+				session.save(obj4);
 				session.getTransaction().commit();
 				break;
 				
 			case 6:
-				System.out.println("Number of totalProduct= "+Item.getTotalpro());
+				System.out.println("Total Number Of Products= "+Item.getTotalpro());
 				break;
 			default:
 				break;

@@ -1,0 +1,44 @@
+package org.nums;
+
+import org.nums.Complex;
+
+public class Complex {
+	public Complex add(int real,int imaginary){
+		Complex out = new Complex();
+		if(imaginary>0){
+		out.setReal(real+this.real);
+		out.setImaginary(imaginary+this.imaginary);
+		System.out.println(out);
+}
+	//	if(imaginary==0){
+		//	out.setImaginary(real+this.real);
+	//	}
+		return out;
+	}
+	public Complex sub(int real,int imaginary){
+		Complex out1 = new Complex();
+		out1.setReal(real-this.real);
+		out1.setImaginary(imaginary+this.imaginary);
+		return out1;
+	}
+	
+	@Override
+	public String toString() {
+		return "Complex [real=" + real + ", imaginary=" + imaginary + "]";
+	}
+
+	private int real;
+	private int imaginary;
+	public int getReal() {
+		return real;
+	}
+	public void setReal(int real) {
+		this.real = real;
+	}
+	public int getImaginary() {
+		return imaginary;
+	}
+	public void setImaginary(int imaginary) {
+		this.imaginary = imaginary;
+	}
+}
