@@ -1,0 +1,25 @@
+package org.collection;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		Collection<String> name=new ArrayList<String>();
+		name.add("harini");
+		name.add("Hamshini");
+		System.out.println(name);
+		
+		
+		Collection<String> author=new ArrayList<String>();
+		author.addAll(name);
+		author.add("Kavi");
+		System.out.println(author);
+		System.out.println(name.contains(author));//flase
+		System.out.println(author);
+		System.out.println(name.removeAll(author));
+		System.out.println(author+"names:"+name);
+	}
+
+}
