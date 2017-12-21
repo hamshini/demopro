@@ -1,0 +1,13 @@
+
+public class VideoStoreLauncher {
+public static void main(String args[])
+{
+	Videostore vs=new Videostore();
+	vs.addVideo("asd");
+	vs.addVideo("ada");
+	vs.checkout("asd");
+	vs.returned("asd");
+	vs.receiveRating("asd", 5);
+	vs.listInventory();
+}
+}

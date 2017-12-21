@@ -1,0 +1,69 @@
+
+public class Videostore {
+private String v[]=new String[10];
+private int count=0;
+int i;
+Video o[]=new Video[10];
+public void Videostore()
+{
+	
+}
+public void addVideo(String title)
+{
+	for(i=0;i<10;i++)
+	{
+		o[i]=new Video();
+	}
+	for(i=0;i<10;i++)
+	{
+		if(o[i].getTitle()==title)
+		{
+			System.out.println("The video is already exists");
+			return;
+		}
+	}
+	v[count]=title;
+	o[count].setTitle(title);
+	o[count].set(true);
+	count++;
+}
+public void checkout(String title)
+{
+	for(i=0;i<10;i++)
+	{
+		if((o[i].getTitle()!=null) && (o[i].getTitle().equals(title)))
+		{
+			o[i].set(false);
+			break;
+		}
+	}
+}
+public void returned(String title)
+{
+	for(i=0;i<10;i++)
+	{
+		if(o[i].getTitle().equals(title))
+		{
+			o[i].set(true);
+			break;
+		}
+	}
+}
+public void receiveRating(String title,double rating)
+{
+	for(i=0;i<10;i++)
+	{
+		if(o[i].getTitle().equals(title))
+		{
+			double d=(o[i].getAvgRat()+rating)/2;
+			o[i].setAvgRat(d);
+			break;
+		}
+	}
+}
+public void listInventory()
+{
+	for(i=0;i<v.length;i++)
+		System.out.println("Title:"+o[i].getTitle()+"\tAvailability: "+o[i].isIsavailable()+"\tRating: "+o[i].getAvgRat() );
+}
+}

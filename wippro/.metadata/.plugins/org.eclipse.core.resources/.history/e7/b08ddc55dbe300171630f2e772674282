@@ -1,0 +1,10 @@
+
+public class Video {
+	private String title;
+	private boolean flag;
+	private float avgRat;
+	public void display(){
+		System.out.println("asdasd");
+	}
+
+}

@@ -1,0 +1,29 @@
+
+public class Videostore {
+private String v[]=new String[10];
+private int count=0;
+Video o[]=new Video[10];
+public void addVideo(String title)
+{
+	int i;
+	for(i=0;i<10;i++)
+			{
+				o[i]=new Video();
+			}
+/*	for(i=0;i<10;i++)
+	{
+		if(o[i].getTitle()==title)
+		{
+			System.out.println("The video is already exists");
+			return;
+		}
+	}*/
+	v[count]=title;
+	
+	o[count].setTitle(title);
+	o[count].setFlag(true);
+	count++;
+	System.out.println(o[0].getTitle()+v[0]);
+}
+
+}

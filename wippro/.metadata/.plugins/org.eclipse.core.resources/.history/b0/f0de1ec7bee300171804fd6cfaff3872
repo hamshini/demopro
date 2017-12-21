@@ -1,0 +1,5 @@
+package org.enumerator;
+
+public enum LoginType {
+
+}

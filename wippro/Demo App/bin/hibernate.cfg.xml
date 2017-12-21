@@ -30,8 +30,12 @@
 
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">create</property>
-	 <mapping class="org.main.User" />	
-	  <mapping class="org.main.Address" />  
+		<!-- <mapping class="org.onetoone.UserCredential" /> -->
+	<!-- <mapping class="org.onetoone.UserProfile" />	 --> 
+	    <mapping class="org.book.Book" />
+	 <mapping class="org.book.Ebook" />	
+	  <mapping class="org.book.PaperBook" />	
+	   <mapping class="org.book.Author" />	
 		<!-- Names the annotated entity class -->
 		<!-- <mapping resource="org/sample/emp/employee.hbm.xml"/> -->
 		<!-- <mapping resource="org/isbn/bk/book.hbm.xml"/> -->

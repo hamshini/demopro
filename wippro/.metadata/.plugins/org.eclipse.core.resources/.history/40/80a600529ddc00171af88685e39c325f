@@ -1,5 +1,0 @@
-package org.thread;
-
-public class NewClass extends Thread {
-
-}

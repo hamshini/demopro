@@ -1,0 +1,36 @@
+
+public class Video {
+	private String title;
+	private boolean isavailable;
+	private double avgRat;
+	private boolean flag=true;
+	public Video()
+	{
+		
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public boolean isIsavailable() {
+		return isavailable;
+	}
+	public void set(boolean isavailable) {
+		this.isavailable = isavailable;
+	}
+	public double getAvgRat() {
+		return avgRat;
+	}
+	public void setAvgRat(double avgRat) {
+		this.avgRat = avgRat;
+		flag=false;
+	}
+	public boolean isFlag() {
+		return flag;
+	}
+
+	
+	
+}
