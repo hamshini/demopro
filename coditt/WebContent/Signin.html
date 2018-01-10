@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SignIn Page</title>
+<link rel='shortcut icon' href='/pyrun/images/fav.png' type='image/x-icon'/>
+<link rel='stylesheet' href='/pyrun/css/bootstrap.min.css' type='text/css'/>
+<link rel='stylesheet' href='/pyrun/css/main-style.css' type='text/css'/>
+<script type="text/javascript" src="/pyrun/scripts/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+body{
+background-color:#92A1CF;
+}
+
+.loginbox {
+  padding: 40px;
+  width: 274px;
+  background-color: #FFF0F5;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.loginbox h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.loginbox input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginbox input[type=text], input[type=password] {
+  font-family:arial;
+  height: 34px;
+  font-size: 16px;
+  width:100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+   background: #fff;
+   border: 1px solid #d9d9d9;
+   border-top: 1px solid #c0c0c0;
+   padding: 0 8px;
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+}
+
+.loginbox input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+   box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color:grey;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color:black;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.button1 {
+  width:100%;
+  padding: 8px 32px;
+  margin: 4px 2px;
+  background-color: #4d90fe;
+}
+
+.button2{
+ width:100%;
+ padding: 8px 32px;
+  margin: 4px 2px;
+  background-color:green;
+}
+</style>
+<script type="text/javascript">
+var url = "http://tools.w3clubs.com/pagr/1.sleep-1.css",
+head = document.getElementsByTagName('head')[0];
+link = document.createElement('link');
+link.type = "text/css";
+link.rel = "stylesheet"
+link.href = url;
+head.appendChild(link);
+</script>
+</head>
+<body>
+<div class="loginbox">
+ <h1>Sign-in</h1><br>
+<form name="signin" action="Sign-in" method="post">
+ <div>
+   <label>Username</label>
+    <input type="text" placeholder="username here" name="uname" required>  
+  </div>
+  <div  >
+  <label>Password</label> 
+   <input type="password" placeholder="password here" name="psw" required> 
+  </div>
+  <div>   
+      <button type="submit" class="button1" name="option" value="signins">Sign in</button>
+  </div>
+  <a href="#">forgot password...?</a>
+  <br>
+  <br>   
+  <div>
+ <div id="button"><a href="Signup.html">need an account...?</a></div>
+ </div>
+<div>
+<h5 style="text-align:center;"> &copy;codit. teampython.kce@gmail.com</h5>
+</div>
+</form>
+</div>
+</body>
+</html>

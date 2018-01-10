@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Signin page</title>
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+</head>
+<body>
+<div style="width: 320px; margin:50px auto;">
+<form class="form-group" action="SigninValidate" method="post">
+ <div class="form-group">
+<label for="authid">UserName</label>
+<input type="text" class="form-control" name="user" id="authid" placeholder="Username here" />
+</div>
+<div class="form-group">
+<label for="authpass">Password</label>
+<input type="password" id="authpass" name="pass" class="form-control" placeholder="Password here" />
+</div>
+<div class="form-group">
+<label>Email Id</label>
+<input type="text" placeholder="Email id here"  class="form-control" name="email" required>
+</div>
+<div class="form-group">
+<label>Full Name</label>
+<input type="text" placeholder="Full name here"  class="form-control" name="full-name" required>
+</div>
+
+<input type="submit" value="Signin" class="btn btn-primary" />
+
+  <hr>
+
+<button type="button" class="btn btn-primary">I have an account</button>
+
+</form>
+</div>
+</body>
+</html>

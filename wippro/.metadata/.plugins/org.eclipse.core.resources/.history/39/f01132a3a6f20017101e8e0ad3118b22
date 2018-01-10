@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.needacc {
+	padding: 14px 20px;
+	background-color: #008CBA;
+}
+.container {
+    padding: 60px;
+}
+
+.signinbtn {
+	padding: 14px 50px;
+	background-color: #4CAF50;
+}
+</style>
+<body>
+	<form action="/action_page.php" style="border:1px solid #ccc">
+	 <div class="container">
+		<div class="form-group">
+			<label><b>UserName</b></label><br> 
+			<br>
+			<input type="text"
+				placeholder="Username here" class="form-control" name="user"
+				required><br>
+				<br>
+				 <label><b>Password</b></label> <br>
+				<br>
+			<input type="password" placeholder="Password here" class="form-control"
+				name="pwd" required> <br>
+		</div>
+		<div class="clearfix">
+			<button type="button" class="signinbtn">Sign in</button>
+
+		</div>
+		<br>------------------------------------</br> <br>
+		<div class="clearfix">
+			<button type="button" class="needacc">Need an account</button>
+
+		</div>
+		</div>
+	</form>
+</body>
+</html>

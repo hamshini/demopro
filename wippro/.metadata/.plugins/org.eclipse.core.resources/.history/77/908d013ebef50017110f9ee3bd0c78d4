@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+<title>Signin page</title>
+</head>
+<style>
+<body>
+
+<form action="SigninValidate" style="border:1px solid #ccc">
+  <div class="container">
+  <div class="form-group">
+<label><b>UserName</b></label>
+    <input type="text" placeholder="Username here"  class="form-control" name="usr" required>  
+  
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Password here"  class="form-control" name="psw" required>
+    
+    <label><b>Email Id</b></label>
+    <input type="text" placeholder="Email id here"  class="form-control" name="email" required>
+
+  
+
+    <label><b>Full Name</b></label>
+    <input type="text" placeholder="Full name here" name="full-name" required>
+    
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+      <hr>
+     <div>
+      <button type="button" class="cancelbtn">I have an account</button>
+    </div>
+  </div>
+  </div>
+</form>
+</body>
+</html>
