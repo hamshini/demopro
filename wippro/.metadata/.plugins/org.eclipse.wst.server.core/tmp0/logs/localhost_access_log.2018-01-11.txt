@@ -1,0 +1,10 @@
+127.0.0.1 - - [11/Jan/2018:09:26:46 +0530] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [11/Jan/2018:09:27:56 +0530] "GET /codit/signin.html HTTP/1.1" 200 731
+127.0.0.1 - - [11/Jan/2018:09:28:06 +0530] "GET /codit/css/bootstrap.min.css HTTP/1.1" 200 121200
+127.0.0.1 - - [11/Jan/2018:09:28:21 +0530] "POST /codit/LoginValidate HTTP/1.1" 200 21
+127.0.0.1 - - [11/Jan/2018:09:28:22 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [11/Jan/2018:09:28:49 +0530] "GET /codit/signup.html HTTP/1.1" 200 1209
+127.0.0.1 - - [11/Jan/2018:09:29:11 +0530] "POST /codit/SignupValidate HTTP/1.1" 500 1869
+127.0.0.1 - - [11/Jan/2018:09:43:42 +0530] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [11/Jan/2018:09:43:42 +0530] "GET /codit/signin.html HTTP/1.1" 304 -
+127.0.0.1 - - [11/Jan/2018:09:43:42 +0530] "GET /codit/css/bootstrap.min.css HTTP/1.1" 304 -

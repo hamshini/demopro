@@ -31,4 +31,10 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
 <fullyQualifiedTypeName name="javax.persistence.EnumType"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.db.DBUtil"/>
+<fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 </qualifiedTypeNameHistroy>

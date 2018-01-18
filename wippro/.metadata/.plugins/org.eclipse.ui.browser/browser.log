@@ -4,3 +4,6 @@ Jan 10, 2018 11:22:36.73 [GFX1]: Potential driver version mismatch ignored due t
 Jan 10, 2018 11:23:34.42 [GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd32 v= and igd10iumd32 v=
 Jan 10, 2018 11:24:33.06 [GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd32 v= and igd10iumd32 v=
 Jan 10, 2018 11:24:33.30 [GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd32 v= and igd10iumd32 v=
+Jan 10, 2018 12:15:40.63 [Parent 3436, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Jan 10, 2018 12:15:43.42 [Parent 3436, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Jan 10, 2018 12:15:47.67 [Child 5700, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
