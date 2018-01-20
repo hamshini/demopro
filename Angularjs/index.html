@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" ng-app="demo">
 
@@ -9,49 +8,37 @@
     <title>Angular Web</title>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </head>
 
 <body>
-    <div class="container" ng-controller="StoreController as store">
-        <table class="table">
-            <tr>
-                <th>#</th>
-                <th>ID</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>&nbsp;</th>
-            </tr>
-            <tr ng-repeat="contact in store.contacts">
-                <td>{{$index + 1}}</td>
-                <td>{{contact.id}}</td>
-                <td>
-                    <span ng-show="!contact.editable">{{contact.firstName}}</span>
-                    <input ng-show="contact.editable" type="text" class="form-control" ng-model="contact.firstName" />
-                </td>
-                <td>
-                    <span ng-show="!contact.editable">{{contact.lastName}}</span>
-                    <input ng-show="contact.editable" type="text" class="form-control" ng-model="contact.lastName" />
-                </td>
-                <td>
-                    <span ng-show="!contact.editable">{{contact.email}}</span>
-                    <input ng-show="contact.editable" type="text" class="form-control" ng-model="contact.email" />
-                </td>
-                <td>
-                    <span ng-show="!contact.editable">{{contact.phone}}</span>
-                    <input ng-show="contact.editable" type="text" class="form-control" ng-model="contact.phone" />
-                </td>
-                <td>
-                    <button ng-show="!contact.editable" ng-click="store.toggleEdit(contact)" class="btn btn-warning btn-sm">Edit</button>
-                    <button ng-show="contact.editable" ng-click="store.toggleEdit(contact)" class="btn btn-success btn-sm">Update</button>
-                    <button ng-click="store.delete($index)" class="btn btn-danger btn-sm">Delete</button>
-                </td>
-            </tr>
-        </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#/home">View</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/new">Add</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="col-12" ng-view></div>
+        </div>
     </div>
-
 </body>
 
 </html>

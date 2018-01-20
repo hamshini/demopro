@@ -1,1 +1,0 @@
-https://github.com/msgtovp/Hibernate/blob/master/hibernate.cfg.xml

@@ -1,27 +1,11 @@
 {
-    "contacts":[{
-        "id":100,
-        "firstName":"hari",
-        "lastName":"ramki",
-        "email":"hari@task.com",
-        "phone":"+91-9876565432"
-    },{
-        "id":102,
-        "firstName":"hamsh",
-        "lastName":"ramki",
-        "email":"hamsh@sample.com",
-        "phone":"+91-9876565433"
-    },{
-        "id":103,
-        "firstName":"lalitha",
-        "lastName":"ramki",
-        "email":"lalitha@sample.com",
-        "phone":"+91-9876565444"
-    },{
-        "id":104,
-        "firstName":"sample",
-        "lastName":"json",
-        "email":"json@sample.com",
-        "phone":"+91-9876565555"
-    }]
+  "contacts": [
+    {
+      "id": "101",
+      "firstName": "Steve",
+      "lastName": "Smith",
+      "email": "steve",
+      "phone": "987654"
+    }
+  ]
 }
